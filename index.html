@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scorekeeper</title>
+  <meta
+    name="description"
+    content="A simple scorekeeping app for tracking games and friendly competitions."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <p class="eyebrow">Scorekeeper</p>
+      <h1>Track points without the spreadsheet.</h1>
+      <p class="intro">
+        Keep a running score for game night, pickup matches, or any quick competition.
+      </p>
+    </section>
+
+    <section class="scoreboard" aria-label="Scoreboard">
+      <article class="team-card" data-team-card>
+        <p class="team-label">Team One</p>
+        <h2 class="team-name" contenteditable="true" spellcheck="false">Blue Team</h2>
+        <p class="score" data-score>0</p>
+        <div class="controls">
+          <button type="button" data-action="decrement">-1</button>
+          <button type="button" data-action="increment">+1</button>
+        </div>
+      </article>
+
+      <article class="team-card" data-team-card>
+        <p class="team-label">Team Two</p>
+        <h2 class="team-name" contenteditable="true" spellcheck="false">Gold Team</h2>
+        <p class="score" data-score>0</p>
+        <div class="controls">
+          <button type="button" data-action="decrement">-1</button>
+          <button type="button" data-action="increment">+1</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="footer-bar">
+      <button type="button" class="reset-button" id="resetScores">Reset Scores</button>
+      <p class="hint">Edit team names inline. Scores are stored in your browser.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
